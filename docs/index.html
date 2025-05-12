@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!--script src="https://cdn.bootcdn.net/ajax/libs/mermaid/11.5.0/mermaid.min.js"></script-->
+		<script src="js/mermaid.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>流程图示例</h3>
+					<div class="mermaid">
+						graph LR
+							A[开始] -->B[结束]
+					</div>
+				  </section>
+				<section>
+					<setion>第二页-1</setion>
+					<setion>第二页-2</setion>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// 初始化 Mermaid
+			document.addEventListener('DOMContentLoaded', function() {
+				mermaid.initialize({ 
+					startOnLoad: false,
+					theme: 'dark',
+					securityLevel: 'loose'
+				});
+				mermaid.init(undefined, '.mermaid');
+				});
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});			
+				
+		
+		</script>
+	</body>
+</html>
